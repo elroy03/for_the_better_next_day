@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+body{
+    display: block;
+    background-color: #f1f1f1;
+    box-sizing: inherit;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px!important;
+}
+
+/* 좌측 네비게이션 */
+.left_nav{
+    background-color: white;
+    display: inline-block;
+    float: left;
+    width: 10%;
+    padding: 0 8px;
+}
+
+/* 우측 내용 칸(전체)*/ 
+.container_con{
+    width: 86%;
+    padding: 0 8px;
+}
+
+/* 그룹 정보 */
+.left_group_info{
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    display: inline-block;
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 0 8px;
+}
+
+.group_center_img{
+    vertical-align: middle;
+    width: 100%;
+}
+
+.group_img{
+    width: 100%;
+}
+
+
+/* 그룹 게시판 목록 */
+.wrapper_list{
+    display: inline-block;
+    float: left;
+    width: 65.9%;
+    height: 100%;
+    padding: 0 8px;
+}
+
+.group_list{
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    width: 100%;
+}
+
+/* 게시물 번호*/
+.list_num{
+    width: 5%;
+}
+
+/* 게시물 제목 */
+.list_title{
+    width: 50%;
+}
+
+/* 게시물 작성자 */
+.list_writer{
+    width: 25%;
+}
+/* 게시물 작성 시간*/
+.list_date{
+    width: 30%;
+}

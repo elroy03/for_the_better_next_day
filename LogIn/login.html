@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="login.css" type="text/css">
+    </head>
+    <body>
+        <div class="limiter">
+            <div class="container">
+                <div class="wrap_login">
+                    <!-- 로그인 폼 -->
+                    <form class="login_form">
+                        <!-- 로그인 타이틀 -->
+                        <span class="login_form_title">
+                        Login
+                        </span>
+                        <!-- 아이디 입력 칸-->
+                        <div class="wrap_input_id" data-validate="Valid id is: a">
+                            <input class="input_id" type="text" name="ID">
+                            <span class="focus_input" data-placeholder="ID"></span> 
+                        </div>
+                        <!-- 비밀번호 입력 칸 -->
+                        <div class="wrap_input_pwd" data-validate="Enter Password">
+                            <span class="btn_show_pwd">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                            <input class="input_pwd" type="password" name="pwd">
+                            <span class="focus_input" data-placeholder="Password"></span> 
+                        </div>
+                        <!-- 로그인 버튼 -->
+                        <div class="container_login_btn">
+                            <div class="wrap_form_btn">
+                                <div class="login_form_bgbtn"></div>
+                                <button class="login_form_btn">
+                                LOGIN
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 회원가입 이동 칸 -->
+                        <div class="text_center">
+                            <span class="txt1">
+                            계정이 없으신가요? 
+                            </span>
+                            <a class="txt2" href="#">
+                            회원가입
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
