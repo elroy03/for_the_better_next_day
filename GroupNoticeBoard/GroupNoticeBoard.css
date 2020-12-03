@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 body{
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url("media/main_image.jpg");
     display: block;
-    background-color: #f1f1f1;
     box-sizing: inherit;
 }
 
@@ -52,7 +55,6 @@ body{
 .group_img{
     width: 100%;
 }
-
 
 /* 그룹 게시판 목록 */
 .wrapper_list{
