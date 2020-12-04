@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+body{
+    font-family: 'Do Hyeon', sans-serif;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url("media/main_image.jpg");
+    display: block;
+    box-sizing: inherit;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+.limiter{
+    width: 100%;
+    min-height: 97vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px!important;
+}
+
+/* 좌측 네비게이션 */
+.left_nav{
+    background-color: skyblue;
+    display: inline-block;
+    float: left;
+    width: 10%;
+    padding: 0 8px;
+}
+
+/* 컨테이너 */
+.container{
+    border-radius: 0 20px 20px 0;
+    background-color: white;
+    display: inline-block;
+    float: left;
+    width: 87%;
+}
+
+/* 상단 그룹 이름 */
+.group_name{
+    display: block;
+    padding: 0 10px;
+    font-size: 50px;
+}
+
+/* 게시판 작성 칸 */
+.writing_form{
+    display: block;
+    padding: 0 10px;
+}
+
+/* 게시물 제목 */
+.title{
+    display: block;
+    width: 90%;
+    padding: 10px;
+    height: 40px;
+    border-bottom: 1px solid grey;
+}
+
+.input_title{
+    height: 100%;
+    width: 80%;
+    font-size: 30px;
+    border: none;
+}
+
+/* 게시물 내용 */
+.content{
+    width: 90%;
+    padding: 10px;
+    height: 60%;
+}
+
+.input_content{
+    height: 100%;
+    width: 80%;
+    font-size: 15px;
+    border: none;
+}
+
+/* 게시 버튼 */
+.upload_btn{
+    width: 20%;
+    height: 5%;
+    padding: 0 10px;
+}
+
+.upload_form_btn{
+    width: 90%;
+    height: 90%;
+    border: none;
+    background-color: #303030;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}

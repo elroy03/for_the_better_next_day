@@ -11,12 +11,14 @@ body{
 
 .limiter{
     width: 100%;
+    max-width: 96vh;
+    max-height: 80vh;
     margin: auto;
 }
 
 .container{
     width: 100%;
-    min-height: 100vh;
+    min-height: 96vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

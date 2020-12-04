@@ -15,7 +15,7 @@ body{
 
 .container{
     width: 100%;
-    min-height: 100vh;
+    min-height: 96vh;
     display: flex;
     flex-wrap: wrap;
     margin-top: 16px!important;
@@ -23,7 +23,7 @@ body{
 
 /* 좌측 네비게이션 */
 .left_nav{
-    background-color: white;
+    background-color: skyblue;
     display: inline-block;
     float: left;
     width: 10%;
@@ -37,7 +37,8 @@ body{
 }
 
 /* 그룹 정보 */
-.left_group_info{
+.left_group_info{    
+    border-radius: 20px;
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     display: inline-block;
@@ -65,7 +66,8 @@ body{
     padding: 0 8px;
 }
 
-.group_list{
+.group_list{    
+    border-radius: 20px;
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     width: 100%;
