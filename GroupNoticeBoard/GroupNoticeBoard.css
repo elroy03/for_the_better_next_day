@@ -71,8 +71,13 @@ body{
     color: white;
     text-decoration: none;
     text-align: center;
+    padding: 8px 16px;
+    margin-top:30px;
 }
 
+#g{
+    pointer-events: none;
+}
 
 /* 우측 내용 칸(전체)*/ 
 .container_con{
@@ -98,13 +103,28 @@ body{
 }
 
 #group_img{
-    width: 100%;
+    width: 90%;
+}
+
+/* 그룹 캘린더 버튼 */
+.go_btn{
+    margin-top: 1%;
+    margin-left: 30%;
+    width: 60%;
+    display: block;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    background: skyblue;
+    border: none;
+    font-size: 25px;
 }
 
 /* 작성 버튼 */
 .write_btn{
-    margin-top: 65%;
+    margin-top: 50%;
     margin-left: 30%;
+    margin-bottom: 3%;
     width: 60%;
     display: block;
     position: relative;

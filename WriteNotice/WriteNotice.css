@@ -66,6 +66,19 @@ body{
     top :3px;
 }
 
+#groups{
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    margin-top:30px;
+}
+
+#g{
+    pointer-events: none;
+}
+
 /* 컨테이너 */
 .container{
     border-radius: 0 20px 20px 0;

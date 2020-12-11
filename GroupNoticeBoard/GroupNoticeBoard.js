@@ -2,21 +2,38 @@ var User = "elroy";
 
 /* 초기 그룹 화면 구성 */
 window.onload = function(){
-    var Group_name = "ForCS3";  
-    var group_num=0; // 현 그룹의 번호(Data의 users에서)
-    var user_num =0; // 현 유저의 번호
-    var number=0;
-    var num=0; // 현 그룹의 번호(Data의 groups에서)
-    var n=0; // 현 그룹의 번호(Groups의 groups에서)
-    
-
-    /* 유저의 위치 찾기 */
-    for(i=0; i<Data.user.length; i++){
-        if(Data.user[i].ID ==User){
-            user_num=i;
+    var name;
+    console.log("find first group");
+    for(var i=0; i<Data.user.length; i++){
+        if(Data.user[i].Groups[0] !=null){
+            name= Data.user[i].Groups[0];
             break;
         }
     }
+    console.log("find it!");
+    setting(name);
+}
+
+function setting(groupname){
+    var Group_name = "ForCS3";  
+    var group_num=0; // 현 그룹의 번호(Data의 users에서)
+    var user_num =0; // 현 유저의 번호
+    var number=0;    
+    var num=0; // 현 그룹의 번호(Data의 groups에서)
+    var n=0; // 현 그룹의 번호(Groups의 groups에서)
+
+    if(groupname!=null){
+        Group_name=groupname;
+    }
+
+    /* 기존 정보 없애기 */
+    document.getElementById("groups").innerHTML=null;
+    document.getElementById("group_name").innerHTML=null;
+    document.getElementById("group_sum").innerHTML=null;
+    document.getElementById("Notice_writer").innerHTML=null;
+    document.getElementById("list").innerHTML=null;
+    document.getElementById("groups").innerHTML="그룹";
+
 
     /* 유저가 가입한 그룹 찾기 */
     group_num=Data.user[user_num].Groups.length;
@@ -27,7 +44,8 @@ window.onload = function(){
             number = i;
         }
     }
-    
+    console.log("find Group");
+
     /* 유저가 가입한 그룹 표시(사이드바) */
     var groupList = document.createElement("ul");
     var parent=document.getElementById("groups");
@@ -38,14 +56,26 @@ window.onload = function(){
         lis.style.margin="0px";
         lis.style.padding="5px 3px"
         lis.style.textAlign="center";
-        lis.addEventListener('click',function(){
-            Group_name = user_group[i];
-        });
         if(user_group[i] == Group_name){
             lis.style.color="black";
         }
+        lis.id = i;
         groupList.appendChild(lis);
     }
+    console.log("side bar");
+
+    var eventTarget = document.getElementsByTagName("a");
+    for(var i=0; i<eventTarget.length;  i++){
+        eventTarget[i].addEventListener("click",function(){
+            var ns = this.id;
+            Group_name=user_group[ns];
+            if(Group_name!=null){
+                console.log(Group_name+"clickeds");
+                setting(Group_name);
+            }
+        });
+    }
+console.log("side bar function");
 
     /* 그룹 이미지 설정 */
     var group_img_src;
@@ -69,14 +99,18 @@ window.onload = function(){
     var groupEx = document.createElement("p");
     groupEx.innerHTML = Data.groups[num].Explanation;
     parent.appendChild(groupEx);
+console.log("set group info");
 
     /* 그룹 게시물 불러오기 */
-    for(i=0; i<Groups.groups.length;){
+    for(i=0; i<Groups.groups.length; i++){
+        console.log(Group_name);
         if(Groups.groups[i].GroupName==Group_name){
             n=i;
             break;
         }
     }
+    console.log("call notice list");
+
     var parent = document.getElementById("list");
     for(i=0; i<Groups.groups[n].Notices.length; i++){
         /* 줄 추가 */
@@ -101,6 +135,9 @@ window.onload = function(){
         parent.appendChild(tr);
         tr.id=i;
     }
+    console.log("show notice list");
+
+    /* 게시물별 Modal(Popup)창 띄우기 */
     var eventTarget = document.getElementsByTagName("tr");
     for(var i=1; i<eventTarget.length; i++){
         console.log(i);
@@ -111,12 +148,13 @@ window.onload = function(){
             
         });
     }
+    console.log("modal function");
 }
-
-
 
 /* 게시물 띄우기 */
 function lookNotice(title,writer,date,content){
+    console.log("open");
+    console.log(title);
     var bg = document.getElementById("modal_content");
     var popup = document.getElementById("modal_wrapper");
 
@@ -146,12 +184,16 @@ function lookNotice(title,writer,date,content){
 
     /* 내용 */
     var parent =document.getElementById("contents");
-    var not_c = document.createElement("p")
-    not_c.innerHTML=content;
-    parent.appendChild(not_c);
+    var C = content.split("&");
+    for(i=0; i<C.length; i++){
+        var not_c = document.createElement("p");
+        not_c.innerHTML = C[i];
+        parent.appendChild(not_c);
+    }
 }
 
 function modalclose(){
+    console.log("close");
     document.getElementById("modal_content").style.display = "none";
     document.getElementById("modal_wrapper").style.display="none";
     document.getElementById("Notice_writer").innerHTML=null;
@@ -160,6 +202,7 @@ function modalclose(){
     document.getElementById("contents").innerHTML=null;
 }
 
+/* 게시물 작성 페이지로 이동 */
 function Write(){
     location.href="/IceFox/WriteNotice/WriteNotice.html";
 }
