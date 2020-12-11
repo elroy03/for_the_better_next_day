@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#content{height: 1100px;color: #222; background-color: #eef0f3;}
+#content > div {width:1100px; margin:0 auto;}
+#invite > div {border:3px solid #c5c5c5;width:440px; display: inline-block; margin-right: 100px;}
+#bfinvite img:hover{cursor: pointer; filter:brightness(75%);}
+#bfinvite >li > img{width:434px; height:66px; }
+#afinvite >li > img{width:434px; height:66px; }
+
+#linkwrap{position: relative;}
+#linkwrap > h2{position: absolute;left:415px;top:60px;}
+#linkwrap > p{position: absolute;left:350px;top:150px;}
+#linkwrap > button{position: absolute;left:460px;top:250px;border: 2px solid #ccc;padding:3px;background-color:#eef0f3;  font-size: 20px; color:black;}
+#linkwrap >button:hover{cursor: pointer;}
+#linkwrap > .sns-go{position: absolute;left:350px;top:300px;}
+
+
+
+#shareUrl {position: absolute; left:250px; top:200px;width:500px;border: 2px solid #ccc;background-color: #eef0f3; height:30px;margin-bottom:20px;text-align: left;color: #333;}
+
+#buttonop{position: relative;left: 350px; top: 400px;}
+#button1 {margin: 0 3px;border: 1px solid #ccc;height: 44px;padding: 0 30px;font-size: 14px;min-width: 140px;color: #666;font-weight: 600;}
+#button2 {margin: 0 3px;border: 1px solid #ccc;height: 44px; padding: 0 30px;font-size: 14px;font-weight: 600;min-width: 140px;color: #e6e5e5;background: #b3b3b3}
+#button1, #button2:hover{cursor: pointer;}
+/*SNS 공유*/
+.sns-go {text-align:center; padding: 20px 0;}
+.sns-go li {display:inline-block; margin: 0 5px; }
+.sns-go li img {border-radius:50%;}
+
+
+#menuwrap{
+    background-color:#31aece;
+    width:150px;
+    height: 100%;
+    opacity: 70%;
+    position: fixed;
+}
+#menuwrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #31aece;
+}
+#menuwrap li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    margin-top:30px;
+}
+
+
+#menuwrap li a:hover{
+    color: black;
+}
+#menuwrap li div:hover{
+    cursor: pointer;
+}
+
+
+#burger div{
+    width:75px;
+    height:6px;
+    margin:7px;
+    background-color: white;
+    position: relative;
+    left:30px;
+    top :3px;
+
+}
