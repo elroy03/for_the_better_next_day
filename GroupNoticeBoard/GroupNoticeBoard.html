@@ -21,6 +21,7 @@
                     <li><a href="">일정 캘린더</a></li>
                     <li><a href="">스캠 캘린더</a></li>
                     <li id="groups">그룹</li>
+                    <li><button id = "add_friend_btn" onclick="addFriend()">친구추가</button></li>
                 </ul>
             </div>
             <!-- 콘텐츠 구역(Gird) -->
@@ -78,6 +79,24 @@
                 <div id="wrapper_content">
                     <div id="contents"></div>
                 </div>
+            </div>
+        </div>
+
+        <!-- 친구 추가를 하는 Modal -->
+        <div id ="add_modal_content" style="display: none;">
+            <div id="add_modal_wrapper" style="display: none;">
+                <!-- 타이틀 -->
+                <div id="modal_title">
+                    <h1>친구 추가</h1>
+                </div>
+                <form id="add_friend">
+                    <p id ="text">친구 추가할 이메일을 입력하세요 : </p>
+                    <input type="email" id="friend_email" placeholder="example@aaa.com...">
+                    <button id="add_it" onclick="addFriendEmail()">추가!</button>
+                </form>
+                <!-- 닫기 버튼 -->
+                <a class ="modal_close_btn" onclick="add_modalclose()">창 닫기</a>
+
             </div>
         </div>
     </body>

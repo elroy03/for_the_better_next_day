@@ -192,6 +192,7 @@ function lookNotice(title,writer,date,content){
     }
 }
 
+/* 게시물 창 닫기 */
 function modalclose(){
     console.log("close");
     document.getElementById("modal_content").style.display = "none";
@@ -205,4 +206,43 @@ function modalclose(){
 /* 게시물 작성 페이지로 이동 */
 function Write(){
     location.href="/IceFox/WriteNotice/WriteNotice.html";
+}
+
+/* 친구 추가 modal */
+function addFriend(){
+    console.log("add open");
+    var bg = document.getElementById("add_modal_content");
+    var popup = document.getElementById("add_modal_wrapper");
+
+    bg.style.filter="alpha(Opacity=50)";
+    bg.style.display="";
+    popup.style.display="";
+}
+
+/* 친구추가 창 닫기 */
+function add_modalclose(){
+    console.log("add close");
+    document.getElementById("add_modal_content").style.display = "none";
+    document.getElementById("add_modal_wrapper").style.display="none";
+}
+
+/* 친구 추가 버튼 */
+function addFriendEmail(){
+    var email = document.getElementById("friend_email").value;
+    if(email==""){
+        alert("이메일을 입력하세요");
+    }
+    else{
+        alert(email+"을 친구로 추가했습니다!!");
+        var n=0;
+        for(i=0; i<Data.user.length; i++){
+            if(Data.user[i].ID == User){
+                n=i;
+                break;
+            }
+        }
+        for(i=0; i<Data.user[n].Friends.length; i++ ){
+            console.log(User+"의"+i+"번째 친구: " + Data.user[n].Friends[i]);
+        }
+    }
 }

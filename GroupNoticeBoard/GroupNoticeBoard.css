@@ -79,6 +79,19 @@ body{
     pointer-events: none;
 }
 
+/* 친구 추가 버튼 */
+#add_friend_btn{
+    font-size: 15px;
+    width:fit-content;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    background: white;
+    border: none;
+    bottom: 25px;
+    left: 30px;
+}
+
 /* 우측 내용 칸(전체)*/ 
 .container_con{
     width: 86%;
@@ -224,4 +237,36 @@ body{
 
 .wrapper_content{
     margin: 3% 1%;
+}
+
+/* 친구 추가를 하는 Modal */
+#add_modal_content{        
+    background-color: gray;
+    background: rgba(0,0,0,0.4); 
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    text-align:center;
+}
+
+#add_modal_wrapper{
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: #ffffff; 
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 60%;
+    height: 150px;
+    transform:translate(-50%, -50%);
+}
+
+#text{
+    display: inline-block;
+}
+
+#friend_email{
+    display: inline-block;
 }
