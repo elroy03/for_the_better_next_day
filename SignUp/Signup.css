@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+body{
+    font-family: 'Do Hyeon', sans-serif;
+    color: darkgray;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url("media/main_image.jpg");
+}
+
+.limiter{
+    width: 100%;
+    max-width: 95vh;
+    max-height: 80vh;
+    margin: auto;
+}
+
+.container{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* 회원가입 폼*/
+.wrap_signup{
+    width: 390px;
+    background:white;
+    border-radius: 10px;
+    padding: 0px 55px 33px 55px;
+}
+
+.signup_form{
+    width: 100%;
+}
+
+/* 회원가입 타이틀 */
+.signup_form_title{
+    display: block;
+    font: bolder;
+    font-size: 50px;
+    color: skyblue;
+    text-align: center;
+}
+
+/* 아이디 */
+.wrap_input_id{
+    position: relative;
+    width: 100%;
+    border-bottom:2px solid grey;
+    margin-bottom: 37px;
+}
+
+#input_id{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 5px;
+}
+
+/* 비밀번호 */
+.wrap_input_pwd{
+    position: relative;
+    width: 100%;
+    border-bottom:2px solid grey;
+    margin-bottom: 37px;
+}
+
+.btn_show_pwd{
+    font-size: 15px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+#input_pwd{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 5px;
+}
+
+/* 비밀번호 확인 */
+.wrap_input_pwd_chk{
+    position: relative;
+    width: 100%;
+    border-bottom:2px solid grey;
+    margin-bottom: 37px;
+}
+
+.btn_show_pwd_chk{
+    font-size: 15px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+#input_pwd_chk{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 5px;
+}
+
+/* 스마트 캠퍼스 아이디 */
+.wrap_input_scam_id{
+    position: relative;
+    width: 100%;
+    border-bottom:2px solid grey;
+    margin-bottom: 37px;
+}
+
+#input_scam_id{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 5px;
+}
+
+/* 스마트 캠퍼스 비밀번호 */
+.wrap_input_scam_pwd{
+    position: relative;
+    width: 100%;
+    border-bottom:2px solid grey;
+    margin-bottom: 37px;
+}
+
+.btn_show_scam_pwd{
+    font-size: 15px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+#input_scam_pwd{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 5px;
+}
+
+/* 이메일 */
+.wrap_input_email{
+    position: relative;
+    width: 100%;
+    border-bottom:2px solid grey;
+    margin-bottom: 37px;
+}
+
+#input_email{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 5px;
+}
+
+/* 비밀번호 보기/숨기기 */
+.zmdi{
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.zmdi-eye:before {
+    content: '\f15c';
+}
+
+/* 회원 가입 버튼 */
+.container_signup_btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px;
+}
+
+.wrap_form_btn{
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.signup_form_bgbtn{
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: all .4s;
+}
+
+.signup_form_btn{
+    font-size: 30px;
+    font: bolder;
+    color: skyblue;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+}
+
+button {
+    outline: none!important;
+    border: none;
+    background: 0 0;
+}
+
+/* 로그인 창으로 이동 버튼*/
+.go_login_btn{
+    margin-left: 70%;
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.go_login{
+    margin: 0;
+    color: black;
+}
+
+/* 기타 */ 
+.text_center{
+    text-align: center!important;
+}
+
+.txt2 {
+    font-size: 17px;
+    color: #333;
+}
+
+/* focus */
+.focus_input{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translateY(-30%);
+    transition: all ease-in 0.25s;
+}
+
+.focus_input::after{
+    font-size: 15px;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    padding-left: 5px;
+    transition: all 0.4s;
+    box-sizing: inherit;
+}

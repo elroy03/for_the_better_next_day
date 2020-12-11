@@ -1,15 +1,26 @@
 <html>
     <head>
         <link rel="stylesheet" href="WriteNotice.css" type="text/css">
+        <script src="WriteNotices.js"></script>
+        <script src="/IceFox/DataExamples/GroupNotices.js"></script>
     </head>
     <body>
         <div class="limiter">
             <!-- 왼쪽 사이드 바 -->
-            <nav class="left_nav">
-                <div>
-                    <p>asdfasdf</p>
-                </div>
-            </nav>
+            <div id="menuwrap">
+                <ul>
+                    <li><div id="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                    </div></li>
+                    <li><a href="">나의 캘린더</a></li>
+                    <li><a href="">일정 캘린더</a></li>
+                    <li><a href="">스캠 캘린더</a></li>
+                    <li><a href="">그룹</a></li>
+                </ul>
+            </div>
             <!-- 작성 페이지 컨테이너 -->
             <div class="container">
                 <!-- 제일 상단의 그룹이름-->
@@ -20,15 +31,15 @@
                 <div class="writing_form">
                     <!-- 게시물 제목-->
                     <div class="title">
-                        <input class="input_title" type="text" placeholder="게시물 제목을 입력하세요.">
+                        <input id="input_title" type="text" placeholder="게시물 제목을 입력하세요.">
                     </div>
                     <!-- 게시물 내용 -->
                     <div class="content">
-                        <input class="input_content" type="text" placeholder="게시물 내용을 입력하세요.">
+                        <input id="input_content" type="text" placeholder="게시물 내용을 입력하세요.">
                     </div>
                     <!-- 게시하기 버튼 -->
                     <div class="upload_btn">
-                        <button class="upload_form_btn">
+                        <button class="upload_form_btn" onclick="PostIt()">
                         게시물 올리기!
                         </button>      
                     </div>

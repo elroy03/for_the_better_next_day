@@ -2,29 +2,42 @@
 <html>
     <head>
         <link rel="stylesheet" href="GroupNoticeBoard.css" type="text/css">
+        <script src="GroupNoticeBoard.js"></script>
+        <script src="/IceFox/DataExamples/GroupNotices.js"></script>
+        <script src="/IceFox/DataExamples/users.js"></script>
     </head>
     <body>
         <div class="container">
             <!-- 왼쪽 사이드 바 -->
-            <nav class="left_nav">
-                <div>
-                    <p>asdfasdf</p>
-                </div>
-            </nav>
+            <div id="menuwrap">
+                <ul>
+                    <li><div id="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                    </div></li>
+                    <li><a href="">나의 캘린더</a></li>
+                    <li><a href="">일정 캘린더</a></li>
+                    <li><a href="">스캠 캘린더</a></li>
+                    <li id="groups"><a></a>그룹</a></li>
+                </ul>
+            </div>
             <!-- 콘텐츠 구역(Gird) -->
             <div class="container_con">
                 <!-- 좌측 그룹 정보 -->
                 <div class ="left_group_info">
                     <!-- 그룹 이미지 -->
                     <p class="group_center_img">
-                        <img src="media/groupimg.png" class="group_img">
+                        <img src="" id="group_img">
                     </p>
                     <hr>
                     <!-- 그룹 이름 -->
-                    <h4 class="group_name">Group name</h4>
-                    <p class="group_sum">
-                        우리 그룹은 어쩌고 저쩌고 blalalal lblallal adfadfasdfffffffff ffffffff
-                    </p> 
+                    <h4 id="group_name"></h4>
+                    <p id="group_sum"></p> 
+                    <button class="write_btn" onclick="Write()">
+                    게시물 작성!
+                    </button>
                 </div>
                 <!-- 우측 게시판 리스트 -->
                 <div class="wrapper_list">
@@ -37,19 +50,30 @@
                                 <th class="list_date">시간</th>
                             </tr>
                         </thead>
-                        <tbody class="list">
-
-                            <!-- dummy -->
-                            <tr>
-                                <th>1</th>
-                                <th>가나다라</th>
-                                <th>나</th>
-                                <th>2020-12-03</th>
-                            </tr>
+                        <tbody id="list">
                         </tbody>
                     </table>
                 </div>
             </div>  
         </div>  
+        
+        <!-- Notice를 띄워서 보여주는 Modal -->
+        <div id ="modal_content" style="display: none;">
+            <div id="modal_wrapper" style="display: none;">
+                <!-- 제목 -->
+                <div id="Notice_title"></div>
+                <a class ="modal_close_btn" onclick="modalclose()">창 닫기</a>
+                <div class="wrapper_notice">
+                    <!-- 작성자& 날짜-->
+                    <br><hr>
+                    <h3 id="Notice_writer"></h3>
+                    <h4 id ="Notice_date"></h4>
+                </div>
+                <!-- 내용 -->
+                <div id="wrapper_content">
+                    <div id="contents"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

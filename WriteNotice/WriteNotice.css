@@ -23,12 +23,47 @@ body{
 }
 
 /* 좌측 네비게이션 */
-.left_nav{
-    background-color: skyblue;
+#menuwrap{
+    background-color:#31aece;
+    width:10%;
     display: inline-block;
     float: left;
-    width: 10%;
     padding: 0 8px;
+}
+
+#menuwrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #31aece;
+}
+
+#menuwrap li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    margin-top:30px;
+}
+
+#menuwrap li a:hover{
+    color: black;
+}
+
+#menuwrap li div:hover{
+    cursor: pointer;
+}
+
+#burger div{
+    width:70%;
+    height:6px;
+    margin:7px;
+    background-color: white;
+    position: relative;
+    left:10%;
+    top :3px;
 }
 
 /* 컨테이너 */
@@ -62,7 +97,7 @@ body{
     border-bottom: 1px solid grey;
 }
 
-.input_title{
+#input_title{
     height: 100%;
     width: 80%;
     font-size: 30px;
@@ -76,7 +111,7 @@ body{
     height: 60%;
 }
 
-.input_content{
+#input_content{
     height: 100%;
     width: 80%;
     font-size: 15px;
