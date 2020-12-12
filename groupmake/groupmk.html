@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/groupmk.css">
+</head>
+<body>
+    <div id="menuwrap">
+        <ul>
+            <li><div id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+            </div></li>
+            <li><a href="">나의 캘린더</a></li>
+            <li><a href="">일정 캘린더</a></li>
+            <li><a href="">스캠 캘린더</a></li>
+            <li><a href="">그룹</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div style="height:50px;"></div>
+        <div class="wrap">
+            <div class="fdiv">
+                <h2>그룹 이름</h2>
+                <div>
+                    <input type="text"id="grname"placeholder="그룹 이름 입력" onfocus="this.placeholder=''" onblur="this.placeholder='그룹 이름 입력'"> 
+                </div>
+            </div>
+            
+            <div class="fdiv">
+                <span id="cover"><img id="big"src="https://coresos-phinf.pstatic.net/a/2ih041/c_d6hUd018adm1vvx62az3rwlf_96o1bg.jpg?type=cover_a640" alt="" width="300px"; heigt="225px";></span>
+                <div id="coverop">
+                    <h3 style="font-size: 13px; height: 23px; margin-left: 40px; margin-top: 0px;">커버 선택</h3>
+                    <div id="imglist">
+                        <ul style="list-style-type: none;">
+                            <li><img class="small" src="https://coresos-phinf.pstatic.net/a/2ih021/c_e6hUd018adm5qmds7qpu6g8_cqyzv.jpg?type=cover_a264" alt="사진1" width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih05d/c_96hUd018adm1rur6nhnkvp85_n0bht9.jpg?type=cover_a264" alt="사진2"width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih08d/c_56hUd018admieg2o766mt6x_4kby2e.jpg?type=cover_a264" alt="사진3"width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih0i5/d_36hUd018adm12cd7ujchmt0d_56q50g.jpg?type=cover_a264" alt="사진4"width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih00e/c_06hUd018adm1i96k1v82ovxg_gd1fok.jpg?type=cover_a264" alt="사진5"width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih093/c_g6hUd018adm1q7a7939bhp9y_32vi7.jpg?type=cover_a264" alt="사진6"width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih055/c_36hUd018admshigztpuo8vj_y71aad.jpg?type=cover_a264" alt="사진7"width="120px"; height="90px";></li>
+                            <li><img class="small"src="https://coresos-phinf.pstatic.net/a/2ih0ci/c_f6hUd018adm7mwzpvy4ulla_uxw4v2.jpg?type=cover_a264" alt="사진8"width="120px"; height="90px";></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fdiv">
+                <h2>그룹 설명</h2>
+                <div>
+                    <textarea name="textarea" id="grex" cols="80" rows="5" style="font-size: 20px;"></textarea> 
+                </div>
+            </div>
+        </div>
+        <div id="buttonop">
+            <button id="button1">취소</button>
+            <button id="button2"onclick="printproperty(); location.href='group2.html';">확인</button>
+        </div>
+    </div>
+    <script>
+        var bPic =document.getElementById("big");
+        var sPic =document.getElementsByClassName("small");
+
+        for(var i=0; i<sPic.length;i++){
+            sPic[i].addEventListener("click",changePic);
+        }
+        function changePic() {
+            var smallPic = this.getAttribute("src");
+            bPic.setAttribute("src",smallPic);
+        }
+        function printproperty() {
+            var name = document.getElementById("grname").value;
+            var picture = document.getElementById("big").src;
+            var explain = document.getElementById("grex").value;
+
+            var text;
+            text +='\n' +"1.그룹 이름: " + name;
+            text +='\n' +"2.커버 사진: " + picture;
+            text +='\n' +"3.그룹 설명: " + explain;
+            alert(text);
+        }
+
+    </script>
+</body>
+</html>
