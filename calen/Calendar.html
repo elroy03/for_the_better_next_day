@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Better Than Yesterday</title>
+<link rel="stylesheet" href="css/Calendar.css"> <!--CSS 파일 연결-->
+</head>
+<body>
+    <!--사이드바-->
+    <div id="menuwrap">
+        <ul>
+            <li><div id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+            </div></li>
+            <li><a href="">나의 캘린더</a></li>
+            <li><a href="">일정 캘린더</a></li>
+            <li><a href="">스캠 캘린더</a></li>
+            <li><a href="">그룹</a></li>
+        </ul>
+    </div>
+    <!--캘린더 HTML-->
+    <table class="scriptCalendar">
+        <thead>
+            <tr>
+                <td onClick="prevCalendar();" style="cursor:pointer;">&#60;&#60;</td>
+                <td colspan="5">
+                    <span id="calYear">YYYY</span>년
+                    <span id="calMonth">MM</span>월
+                </td>
+                <td onClick="nextCalendar();" style="cursor:pointer;">&#62;&#62;</td>
+            </tr>
+            <tr>
+                <td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+</table>
+<div id="schedulewrap">
+    <label id="sctitle">일정제목: <input id="sctit"class="inp"type="text"></label><br>
+    <label id="sctime">일정시간: <input id="sctimer1" class="inp" type="time">~<input id="sctimer2" class="inp" type="time"></label>
+    <textarea name="" id="sccontent" class="inp" cols="42" rows="5" placeholder="일정 내용"></textarea><br>
+    <button id="butt">확인</button>
+</div>
+<button>일정 공유</button>
+
+</body>
+<script src="Calendar.js" type="text/javascript"> </script> <!--javascript파일 연결-->
+</html>
